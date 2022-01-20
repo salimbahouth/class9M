@@ -1,6 +1,11 @@
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import java.awt.*;
 
 public class HomeWork9 {
     private static ChromeDriver driver;
@@ -70,10 +75,54 @@ public class HomeWork9 {
 //        Actions myAction = new Actions(driver);
 //        myAction.doubleClick(doubleClickElement);
 //        myAction.perform();
-//
 //        String result = driver.findElement(By.id("title")).getText();
-//        Assert.assertEquals("You double clicked", result);
+//        Assert.assertEquals("Actions", result);
 //    }
+
+//    @Test
+//    public void test053_mouseHover() {
+//        WebElement buttonElement = driver.findElement(By.id("close"));
+//        Actions myAction = new Actions(driver);
+//        myAction.moveToElement(buttonElement);
+//        myAction.build().perform();
+//    }
+
+//    @Test
+//    public void test054_select() {
+//        List<WebElement> elementsList = driver.findElement(By.name("option"));
+//        Actions hold = new Actions(driver);
+//        hold.clickAndHold(elementsList.get(0)).clickAndHold(elementsList.get(2)).click();
+//        hold.build().perform();
+//    }
+
+//    @Test
+//    public void test055_upload() {
+//
+//
+//    }
+
+//    @Test
+//    public void test056_scrollToElement() throws InterruptedException {
+//        Thread.sleep(2000);
+//        WebElement element = driver.findElement(By.id("clickMe"));
+//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+//    }
+
+//    @Test
+//    public void test056_scrollToLocation() throws InterruptedException {
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        js.executeScript("javascript:window.scrollBy(250,350)");
+//
+//    }
+
+    @Test
+    public void test056_scrollToLocation()  {
+        WebElement uploadF = driver.findElement(By.name("pic"));
+        uploadF.sendKeys("Users/cupra/IdeaProjects/class9M/element-screenshot");
+
+    }
+
+
 
 
     @AfterClass

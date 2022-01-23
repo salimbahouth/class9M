@@ -1,5 +1,4 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -13,7 +12,7 @@ public class HomeWork9 {
     public static void beforeClass(){
         System.setProperty("webdriver.chrome.driver", "/Users/cupra/Downloads/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.get("https://dgotlieb.github.io/Actions/");
+//        driver.get("https://dgotlieb.github.io/Actions/");
 
     }
 
@@ -94,9 +93,8 @@ public class HomeWork9 {
 //    }
 
 //    @Test
-//    public void test055_upload() {
-//
-//
+//    public static void upld(){
+//        driver.findElement(By.name("pic")).sendKeys("C:\\Users\\cupra\\Desktop/ss.txt");
 //    }
 
 //    @Test
@@ -113,14 +111,20 @@ public class HomeWork9 {
 //
 //    }
 
+//    @Test
+//    public void test056_scrollToLocation()  {
+//        WebElement uploadF = driver.findElement(By.name("pic"));
+//        uploadF.sendKeys("Users/cupra/IdeaProjects/class9M/element-screenshot");
+//
+//    }
+
     @Test
-    public void test056_scrollToLocation()  {
-        WebElement uploadF = driver.findElement(By.name("pic"));
-        uploadF.sendKeys("Users/cupra/IdeaProjects/class9M/element-screenshot");
+    public void test057_Deminsions()  {
+        driver.get("https://dgotlieb.github.io/WebCalculator/");
+        System.out.println(driver.findElement(By.id("two")).getRect().getHeight());
+        System.out.println(driver.findElement(By.id("six")).getRect().getWidth());
 
     }
-
-
 
 
     @AfterClass
